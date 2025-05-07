@@ -1,0 +1,30 @@
+
+.HeaderContainer{
+width: 100%;
+display: flex;
+justify-content: center;
+.header{
+    display:flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+    .Text-header{
+        display:flex ;
+        align-items: baseline;
+        
+ 
+     
+
+        h2, h3{
+            display: flex;
+            margin-left: 25px;
+            font-size: 15px;
+            font-weight:500;
+            font-family: 'Montserrat';
+            
+        }
+    }
+
+
+}
+}

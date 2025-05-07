@@ -1,0 +1,20 @@
+
+.Container{
+
+
+
+.BodyContainer{
+    display: flex;
+    justify-content: center;
+
+.CardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80%;
+    padding-top: 30px;
+    background-color: #F6F6F6;
+}
+
+}
+}
