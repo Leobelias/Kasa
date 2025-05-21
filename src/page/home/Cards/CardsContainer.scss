@@ -1,20 +1,35 @@
-
-.Container{
-
-
-
-.BodyContainer{
+.Container {
+  .BodyContainer {
     display: flex;
     justify-content: center;
 
-.CardContainer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 80%;
-    padding-top: 30px;
-    background-color: #F6F6F6;
+    .CardContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      width: 80%;
+      padding-top: 30px;
+      background-color: #f6f6f6;
+    }
+  }
 }
 
-}
+@media (max-width: 375px) {
+  .Container {
+    .BodyContainer {
+      .CardContainer {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        background: none;
+      }
+      .card {
+        width: 90%;
+        height: 250px;
+        min-width: unset;
+        max-width: 100%;
+        margin: 15px 0;
+      }
+    }
+  }
 }

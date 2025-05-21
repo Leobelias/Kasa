@@ -1,0 +1,5 @@
+@media (max-width: 375px) {
+  .BannerContainer .banner h1 {
+    display: block;
+  }
+}

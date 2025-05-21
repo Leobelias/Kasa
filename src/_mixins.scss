@@ -1,0 +1,35 @@
+@mixin descbox(
+  $bg: #ff6060,
+  $color: #fff,
+  $radius: 12px,
+  $padding-v: 14px,
+  $padding-h: 22px
+) {
+  background: $bg;
+  color: $color;
+  border-radius: $radius;
+  padding: $padding-v $padding-h;
+  font-weight: 600;
+  font-family: "MontSerrat", Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.13rem;
+  cursor: pointer;
+  transition: background 0.18s;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 0.2px;
+  outline: none;
+  border: none;
+  user-select: none;
+}
+
+.ChevronIcon {
+  width: 26px;
+  height: 26px;
+  margin-left: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
