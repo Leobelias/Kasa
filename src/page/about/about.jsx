@@ -1,14 +1,11 @@
-import Header from "../../layout/header/header";
-import Banner from "../home/Banner/Banner";
-import Footer from "../../layout/footer/footer";
 import Accordion from "../../components/Accordion/Accordion";
 import "./../../components/Accordion/Accordion.scss";
 import "./about.scss";
+import Banner from "../../layout/Banner/Banner";
 
 function About() {
   return (
     <div>
-      <Header />
       <Banner image="/src/assets/BannerPicture2.svg" texte="" />
 
       <div className="AboutContainer">
@@ -36,7 +33,6 @@ function About() {
           sur la sécurité domestique pour nos hôtes.
         </Accordion>
       </div>
-      <Footer />
     </div>
   );
 }

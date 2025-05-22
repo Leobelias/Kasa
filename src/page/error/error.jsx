@@ -1,12 +1,9 @@
 import "./error.scss";
-import Header from "../../layout/header/header";
-import Footer from "../../layout/footer/footer";
 import { Link } from "react-router-dom";
 
 function Error() {
   return (
     <div>
-      <Header />
       <div className="ErrorContainer">
         <h1>404</h1>
         <div className="ErrorMsg">
@@ -16,7 +13,6 @@ function Error() {
           <Link to="/">Retourner sur la page d'acceuil</Link>
         </h3>
       </div>
-      <Footer />
     </div>
   );
 }

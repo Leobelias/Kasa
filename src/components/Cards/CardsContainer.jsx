@@ -1,6 +1,6 @@
 import Card from "./Card/Card.jsx";
 import "./CardsContainer.scss";
-import data from "../../../data/data.json";
+import data from "../../data/data.json";
 
 const CardInfo = data.map((item) => {
   return <Card title={item.title} cover={item.cover} id={item.id} />;

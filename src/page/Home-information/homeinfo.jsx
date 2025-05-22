@@ -2,8 +2,6 @@ import "./homeinfo.scss";
 import { useParams } from "react-router-dom";
 import data from "../../data/data.json";
 import React, { useState } from "react";
-import Header from "../../layout/header/header";
-import Footer from "../../layout/footer/footer";
 import Accordion from "../../components/Accordion/Accordion";
 import Error from "../error/error";
 
@@ -18,16 +16,21 @@ function HomeInfo() {
 
   return (
     <div>
-      <Header />
       <div className="InfoContainer">
         <div className="ImgSliderContainer">
           <div className="ImgSlider">
-            {currentImage > 0 && (
+            {logement.pictures.length > 1 && (
               <button
                 className="LeftBtn"
-                onClick={() => setCurrentImage(currentImage - 1)}
+                onClick={() => {
+                  setCurrentImage(
+                    currentImage === 0
+                      ? logement.pictures.length - 1
+                      : currentImage - 1
+                  );
+                }}
               >
-                <img src="/src/assets/ChevronGauche.svg"></img>
+                <img src="/src/assets/ChevronGauche.svg" alt="précédente" />
               </button>
             )}
 
@@ -37,13 +40,25 @@ function HomeInfo() {
               className="ImgLogement"
             />
 
-            {currentImage < logement.pictures.length - 1 && (
+            {logement.pictures.length > 1 && (
               <button
                 className="RightBtn"
-                onClick={() => setCurrentImage(currentImage + 1)}
+                onClick={() => {
+                  setCurrentImage(
+                    currentImage === logement.pictures.length - 1
+                      ? 0
+                      : currentImage + 1
+                  );
+                }}
               >
-                <img src="/src/assets/ChevronDroit.svg"></img>
+                <img src="/src/assets/ChevronDroit.svg" alt="suivante" />
               </button>
+            )}
+
+            {logement.pictures.length > 1 && (
+              <div className="ImgCounter">
+                {currentImage + 1} / {logement.pictures.length}
+              </div>
             )}
           </div>
         </div>
@@ -95,8 +110,6 @@ function HomeInfo() {
           </Accordion>
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 }

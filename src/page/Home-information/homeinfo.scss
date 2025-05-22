@@ -56,6 +56,23 @@
       border-radius: 18px;
       display: block;
     }
+    .ImgCounter {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #fff;
+      background: rgba(30, 30, 30, 0.6);
+      border-radius: 10px;
+      padding: 3px 14px;
+      display: inline-block;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 15px;
+      z-index: 2;
+    }
+    .ImgSlider {
+      position: relative;
+    }
   }
 }
 
@@ -116,6 +133,7 @@
     font-weight: 500;
     margin: 0 0 2px 0;
     text-align: center;
+    font-family: "MontSerrat";
   }
 
   .HostDesc img {
@@ -142,7 +160,7 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   .InfoContainer {
     max-width: 100%;
     margin: 16px 0 0 0;
