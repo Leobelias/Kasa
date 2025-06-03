@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./Accordion.scss";
+
 function Accordion({ label, children }) {
   const [open, setOpen] = useState(false);
+  const contentRef = useRef(null);
 
   return (
     <div className="AccordionBox">
@@ -14,15 +16,30 @@ function Accordion({ label, children }) {
       >
         <span>{label}</span>
         <img
-          src={open ? "/src/assets/chevron2.svg" : "/src/assets/chevron.svg"}
+          src="/src/assets/chevron.svg"
           alt="chevron"
           className={`ChevronIcon${open ? " open" : ""}`}
         />
       </div>
       <div
-        className={`AccordionContent${open ? "" : " AccordionContent--closed"}`}
+        className="AccordionContent"
+        style={{
+          maxHeight: open
+            ? contentRef.current
+              ? contentRef.current.scrollHeight + "px"
+              : "999px"
+            : "0px",
+          transition: "max-height 0.7s cubic-bezier(0.4,0,0.2,1), padding 0.7s",
+          padding: open ? "20px 30px 22px" : "0 30px",
+          overflow: "hidden",
+        }}
       >
-        {children}
+        <div
+          className={`AccordionContentInner${open ? " open" : ""}`}
+          ref={contentRef}
+        >
+          {children}
+        </div>
       </div>
     </div>
   );

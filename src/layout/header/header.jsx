@@ -1,6 +1,6 @@
 import Logo from "./Logo/Logo.jsx";
 import "./header.scss";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   return (
@@ -11,12 +11,19 @@ function Header() {
         </div>
 
         <div className="Text-header">
-          <Link to={`/`}>
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? "active" : "")}
+            end
+          >
             <h2>Accueil</h2>
-          </Link>
-          <Link to={"/About"}>
+          </NavLink>
+          <NavLink
+            to="/About"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
             <h3>A propos</h3>
-          </Link>
+          </NavLink>
         </div>
       </div>
     </div>

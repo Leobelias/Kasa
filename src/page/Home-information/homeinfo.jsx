@@ -15,7 +15,7 @@ function HomeInfo() {
   }
 
   return (
-    <div>
+    <div className="InfoPage">
       <div className="InfoContainer">
         <div className="ImgSliderContainer">
           <div className="ImgSlider">

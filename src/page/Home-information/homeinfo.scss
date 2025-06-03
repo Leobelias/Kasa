@@ -1,78 +1,84 @@
 @import "../../_mixins";
-
-.InfoContainer {
-  max-width: 1050px;
-  margin: 40px auto;
+.InfoPage {
   display: flex;
+  align-items: center;
   flex-direction: column;
-  gap: 24px;
-
-  .ImgSliderContainer {
+  .InfoContainer {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 18px;
+    width: 90vw;
+    max-width: 1550px;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 24px;
 
-    .ImgSlider {
+    .ImgSliderContainer {
       display: flex;
-      align-items: center;
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-
-      button {
-        display: flex;
-        background: transparent;
-        border: none;
-        padding: 0;
-        cursor: pointer;
-      }
-    }
-    .LeftBtn,
-    .RightBtn {
-      position: absolute;
-      width: 44px;
-      height: 44px;
-      display: flex;
-      align-items: center;
       justify-content: center;
-      border-radius: 8px;
-      z-index: 2;
-    }
-
-    .LeftBtn {
-      left: 12px;
-    }
-
-    .RightBtn {
-      right: 12px;
-    }
-
-    .ImgLogement {
+      align-items: center;
+      margin-bottom: 18px;
       width: 100%;
-      height: 355px;
-      object-fit: cover;
-      border-radius: 18px;
-      display: block;
-    }
-    .ImgCounter {
-      margin-top: 10px;
-      font-size: 1rem;
-      color: #fff;
-      border-radius: 10px;
-      padding: 3px 14px;
-      display: inline-block;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: 15px;
-      z-index: 2;
-      font-family: "MontSerrat";
-      font-size: 15px;
-    }
-    .ImgSlider {
-      position: relative;
+      max-width: 100%;
+
+      .ImgSlider {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+
+        button {
+          display: flex;
+          background: transparent;
+          border: none;
+          padding: 0;
+          cursor: pointer;
+        }
+      }
+      .LeftBtn,
+      .RightBtn {
+        position: absolute;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        z-index: 2;
+      }
+
+      .LeftBtn {
+        left: 12px;
+      }
+
+      .RightBtn {
+        right: 12px;
+      }
+
+      .ImgLogement {
+        width: 100%;
+        height: 355px;
+        object-fit: cover;
+        border-radius: 18px;
+        display: block;
+      }
+      .ImgCounter {
+        margin-top: 10px;
+        font-size: 1rem;
+        color: #fff;
+        border-radius: 10px;
+        padding: 3px 14px;
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 15px;
+        z-index: 2;
+        font-family: "MontSerrat";
+        font-size: 15px;
+      }
+      .ImgSlider {
+        position: relative;
+      }
     }
   }
 }
