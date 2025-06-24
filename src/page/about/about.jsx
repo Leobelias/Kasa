@@ -1,5 +1,5 @@
 import Accordion from "../../components/Accordion/Accordion";
-import "./../../components/Accordion/Accordion.scss";
+import "./../../components/Accordion/accordion.scss";
 import "./about.scss";
 import Banner from "../../layout/Banner/Banner";
 
