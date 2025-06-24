@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import "./Accordion.scss";
+import "./accordion.scss";
 
 function Accordion({ label, children }) {
   const [open, setOpen] = useState(false);

@@ -1,5 +1,5 @@
 import Card from "./Card/Card.jsx";
-import "./CardsContainer.scss";
+import "./cardscontainer.scss";
 import data from "../../data/data.json";
 
 const CardInfo = data.map((item) => {
