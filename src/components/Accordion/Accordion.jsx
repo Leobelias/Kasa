@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import "./accordion.scss";
+import Chevron from "../../assets/chevron.svg";
 
 function Accordion({ label, children }) {
   const [open, setOpen] = useState(false);
@@ -16,7 +17,7 @@ function Accordion({ label, children }) {
       >
         <span>{label}</span>
         <img
-          src="/src/assets/chevron.svg"
+          src={Chevron}
           alt="chevron"
           className={`ChevronIcon${open ? " open" : ""}`}
         />

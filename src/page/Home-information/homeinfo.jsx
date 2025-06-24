@@ -4,6 +4,10 @@ import data from "../../data/data.json";
 import React, { useState } from "react";
 import Accordion from "../../components/Accordion/Accordion";
 import Error from "../error/error";
+import ChevronDroit from "../../assets/ChevronDroit.svg";
+import ChevronGauche from "../../assets/ChevronGauche.svg";
+import StarActive from "../../assets/star-active.svg";
+import StarInactive from "../../assets/star-inactive.svg";
 
 function HomeInfo() {
   const { id } = useParams();
@@ -30,7 +34,7 @@ function HomeInfo() {
                   );
                 }}
               >
-                <img src="/src/assets/ChevronGauche.svg" alt="précédente" />
+                <img src={ChevronGauche} alt="précédente" />
               </button>
             )}
 
@@ -51,7 +55,7 @@ function HomeInfo() {
                   );
                 }}
               >
-                <img src="/src/assets/ChevronDroit.svg" alt="suivante" />
+                <img src={ChevronDroit} alt="suivante" />
               </button>
             )}
 
@@ -87,11 +91,7 @@ function HomeInfo() {
               {[1, 2, 3, 4, 5].map((i) => (
                 <img
                   key={i}
-                  src={
-                    i <= logement.rating
-                      ? "/src/assets/star-active.svg"
-                      : "/src/assets/star-inactive.svg"
-                  }
+                  src={i <= logement.rating ? StarActive : StarInactive}
                   alt={`${logement.rating} étoiles`}
                   className="StarIcon"
                 />
